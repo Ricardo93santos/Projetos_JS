@@ -12,7 +12,7 @@ visor.innerHTML = `00:00:00:00`
 
 // Função para iniciar Cronometro
 function iniciarCronometro(){
-  cronometro = setInterval(cronometrar, 15)
+  cronometro = setInterval(cronometrar, 17)
     function cronometrar(){
       milesegundos++
       if(milesegundos == 60){
