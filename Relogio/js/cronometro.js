@@ -5,16 +5,20 @@ let zerar = document.querySelector("#zerar")
 let horas = 0
 let minutos = 0
 let segundos = 0
+let milesegundos = 0
 let cronometro
 
-visor.innerHTML = `00:00:00`
+visor.innerHTML = `00:00:00:00`
 
 // Função para iniciar Cronometro
 function iniciarCronometro(){
-  cronometro = setInterval(cronometrar, 1000)
+  cronometro = setInterval(cronometrar, 15)
     function cronometrar(){
-      segundos++
-
+      milesegundos++
+      if(milesegundos == 60){
+        milesegundos = 0
+        segundos++
+      }
       if(segundos == 60){
         segundos = 0
         minutos++
@@ -24,7 +28,7 @@ function iniciarCronometro(){
         horas++
       }
       
-      let formatoDoCronometro = (horas < 10 ? `0${horas}`: horas) + ":" + (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)
+      let formatoDoCronometro = (horas < 10 ? `0${horas}`: horas) + ":" + (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)+ ":" + (milesegundos < 10 ? `0${milesegundos}` : milesegundos)
 
       visor.innerHTML = `${formatoDoCronometro}`
   }
