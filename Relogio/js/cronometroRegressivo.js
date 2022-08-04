@@ -2,29 +2,96 @@ let visorRegre = document.querySelector('#visorCronometroRegressivo')
 let selecaoTempo = document.querySelector("#selecaoTempo")
 let iniciarCrono = document.querySelector("#inicio")
 
-
+visorRegre.innerHTML = `--:--`
 function rodarCrono(){
+  let crono
+  let minutos
+  let segundos
   if(selecaoTempo.selectedIndex == 0){
-    let minutos = 30
-    let segundos = 0
-    segundos--
-    if(segundos == -1){
-      segundos = 59
-      minutos--
-      if(minutos == -1){
-        segundos = 0
-        minutos = 0
-        visorRegre.innerHTML = `${minutos}:${segundos}`
+    minutos = 30
+    segundos = 0
+    visorRegre.innerHTML = `${minutos}:0${segundos}`
+    crono = setInterval(comecarCrono, 1000)
+    function comecarCrono(){
+      if(selecaoTempo.selectedIndex != 0){
+        clearInterval(crono)
       }
-      visorRegre.innerHTML = `${minutos}:${segundos}`
+      segundos--
+      if(segundos == -1){
+        segundos = 59
+        minutos--
+      }
+      if(minutos == 0 && segundos == 0){
+        clearInterval(crono)
+      }
+
+      let formatoVisor = (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)
+      visorRegre.innerHTML = `${formatoVisor}`
     }
-  }else if(selecaoTempo.selectedIndex == 1){
-    visorRegre.innerHTML = `25:00`
+   }
+  else if(selecaoTempo.selectedIndex == 1){
+    minutos = 25
+    segundos = 0
+    visorRegre.innerHTML = `${minutos}:0${segundos}`
+    crono = setInterval(comecarCrono, 1000)
+    function comecarCrono(){
+      if(selecaoTempo.selectedIndex != 1){
+        clearInterval(crono)
+      }
+      segundos--
+      if(segundos == -1){
+        segundos = 59
+        minutos--
+      }
+      if(minutos == 0 && segundos == 0){
+        clearInterval(crono)
+      }
+      let formatoVisor = (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)
+      visorRegre.innerHTML = `${formatoVisor}`
+    }
   }else if(selecaoTempo.selectedIndex == 2){
-    visorRegre.innerHTML = `20:00`
+    minutos = 20
+    segundos = 0
+    visorRegre.innerHTML = `${minutos}:0${segundos}`
+    crono = setInterval(comecarCrono, 1000)
+    function comecarCrono(){
+      if(selecaoTempo.selectedIndex != 2){
+        clearInterval(crono)
+      }
+      segundos--
+      if(segundos == -1){
+        segundos = 59
+        minutos--
+      }
+      if(minutos == 0 && segundos == 0){
+        clearInterval(crono)
+      }
+      let formatoVisor = (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)
+      visorRegre.innerHTML = `${formatoVisor}`
+    }
   }else if(selecaoTempo.selectedIndex == 3){
-    visorRegre.innerHTML = `15:00`
+    minutos = 15
+    segundos = 0
+    visorRegre.innerHTML = `${minutos}:0${segundos}`
+    crono = setInterval(comecarCrono, 1000)
+    function comecarCrono(){
+      if(selecaoTempo.selectedIndex != 3){
+        clearInterval(crono)
+      }
+      segundos--
+      if(segundos == -1){
+        segundos = 59
+        minutos--
+      }
+      if(minutos == 0 && segundos == 0){
+        clearInterval(crono)
+      }
+      if(selecaoTempo.selectedIndex == 0 || selecaoTempo.selectedIndex == 1 || selecaoTempo.selectedIndex == 2){
+        clearInterval(crono)
+      }
+      let formatoVisor = (minutos < 10 ? `0${minutos}` : minutos)+ ":" + (segundos < 10 ? `0${segundos}`: segundos)
+      visorRegre.innerHTML = `${formatoVisor}`
+    }
   }  
 }
-
 iniciarCrono.addEventListener("click", rodarCrono)
