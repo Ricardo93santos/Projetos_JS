@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relógio Digital</title>
   <link rel="stylesheet" href="css/style.css">
+  <script async src="js/relogio.js"></script>
+  <script async src="js/cronometro.js"></script>
+  <script async src="js/cronometroRegressivo.js"></script>
 </head>
 <body>
-  <section>
+  
+  <section id="relogio-digital">
     <div id="relogio"></div>
   </section>
   <section id="cronometro">
@@ -19,18 +23,14 @@
   </section>
   <section id="cronometro-regressivo">
     <div id="visorCronometroRegressivo"></div>
-
-      <select name="selecaoTempo" id="selecaoTempo">
-        <option value="30:00">30:00</option>
-        <option value="25:00">25:00</option>
-        <option value="20:00">20:00</option>
-        <option value="15:00">15:00</option>
-      </select>
-      <input type="button" id="inicio" value="Iniciar">
-
+    <select name="selecaoTempo" id="selecaoTempo">
+      <option value="30:00">30:00</option>
+      <option value="25:00">25:00</option>
+      <option value="20:00">20:00</option>
+      <option value="15:00">15:00</option>
+    </select>
+    <input type="button" id="inicio" value="Iniciar">
   </section>
-  <script src="js/relogio.js"></script>
-  <script src="js/cronometro.js"></script>
-  <script src="js/cronometroRegressivo.js"></script>
+
 </body>
 </html>
