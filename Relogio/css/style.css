@@ -22,3 +22,12 @@ main{
   justify-content: center;
   margin-top: 1rem;
 }
+#relogio-digital{
+  display: block;
+}
+#cronometro{
+  display: none;
+}
+#cronometro-regressivo{
+  display: none;
+}
