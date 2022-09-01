@@ -19,7 +19,7 @@
       <span class="indicator"></span>
     </label>
   </div>
-  <div id="container">
+  <div id="container" class="pt-center">
     <header class="box-sdw">
       <ul id="menu">
         <li><a id="bt-relogio" href="#relogio-digital"><img src="img/relogio.png" alt="relogio"></a></li>
@@ -27,25 +27,25 @@
         <li><a id="bt-cronometro-regressivo" href="#cronometro-regressivo"><img src="img/despertador.png" alt="cronometro-regressivo"></a></li>
       </ul>
     </header>
-    <main>
+    <main class="pt-center">
       <section id="relogio-digital">
         <div id="relogio"></div>
       </section>
       <section id="cronometro">
-        <div id="visorCronometro"></div>
-        <input type="button" id="iniciar" value="Iniciar">
-        <input type="button" id="parar" value="Parar">
-        <input type="button" id="zerar" value="Zerar">
+        <div id="visorCronometro" class="pt-center"></div>
+        <input type="button" class="btn-style" id="iniciar" value="Iniciar">
+        <input type="button" class="btn-style" id="parar" value="Parar">
+        <input type="button" class="btn-style" id="zerar" value="Zerar">
       </section>
-      <section id="cronometro-regressivo">
-        <div id="visorCronometroRegressivo"></div>
-        <select name="selecaoTempo" id="selecaoTempo">
+      <section id="cronometro-regressivo" >
+        <div id="visorCronometroRegressivo" class="pt-center"></div>
+        <select name="selecaoTempo" id="selecaoTempo" class="opt-style">
           <option value="30:00">30:00</option>
           <option value="25:00">25:00</option>
           <option value="20:00">20:00</option>
           <option value="15:00">15:00</option>
         </select>
-        <input type="button" id="inicio" value="Iniciar">
+        <input type="button" class="btn-style" id="inicio" value="Iniciar">
       </section>
     </main>
   </div>
