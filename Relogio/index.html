@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" >
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,36 +12,39 @@
   <script async src="js/addRemove.js"></script>
 </head>
 <body>
-  <header>
-    <ul id="menu">
-      <li><a id="bt-relogio" href="#relogio-digital"><img src="img/relogio.png" alt="relogio"></a></li>
-      <li><a id="bt-cronometro" href="#cronometro"><img src="img/tempo-rapido.png" alt="cronometro"></a></li>
-      <li><a id="bt-cronometro-regressivo" href="#cronometro-regressivo"><img src="img/despertador.png" alt="cronometro-regressivo"></a></li>
-    </ul>
-    <div id="dark-mode">
-      <input type="checkbox" name="" id="">
-    </div>
-  </header>
-  <main>
-    <section id="relogio-digital">
-      <div id="relogio"></div>
-    </section>
-    <section id="cronometro">
-      <div id="visorCronometro"></div>
-      <input type="button" id="iniciar" value="Iniciar">
-      <input type="button" id="parar" value="Parar">
-      <input type="button" id="zerar" value="Zerar">
-    </section>
-    <section id="cronometro-regressivo">
-      <div id="visorCronometroRegressivo"></div>
-      <select name="selecaoTempo" id="selecaoTempo">
-        <option value="30:00">30:00</option>
-        <option value="25:00">25:00</option>
-        <option value="20:00">20:00</option>
-        <option value="15:00">15:00</option>
-      </select>
-      <input type="button" id="inicio" value="Iniciar">
-    </section>
-  </main>
+  <div id="toggle" class="box-sdw">
+    <i class="indicator"></i>
+  </div>
+
+  <div id="container">
+    <header class="box-sdw">
+      <ul id="menu">
+        <li><a id="bt-relogio" href="#relogio-digital"><img src="img/relogio.png" alt="relogio"></a></li>
+        <li><a id="bt-cronometro" href="#cronometro"><img src="img/tempo-rapido.png" alt="cronometro"></a></li>
+        <li><a id="bt-cronometro-regressivo" href="#cronometro-regressivo"><img src="img/despertador.png" alt="cronometro-regressivo"></a></li>
+      </ul>
+    </header>
+    <main>
+      <section id="relogio-digital">
+        <div id="relogio"></div>
+      </section>
+      <section id="cronometro">
+        <div id="visorCronometro"></div>
+        <input type="button" id="iniciar" value="Iniciar">
+        <input type="button" id="parar" value="Parar">
+        <input type="button" id="zerar" value="Zerar">
+      </section>
+      <section id="cronometro-regressivo">
+        <div id="visorCronometroRegressivo"></div>
+        <select name="selecaoTempo" id="selecaoTempo">
+          <option value="30:00">30:00</option>
+          <option value="25:00">25:00</option>
+          <option value="20:00">20:00</option>
+          <option value="15:00">15:00</option>
+        </select>
+        <input type="button" id="inicio" value="Iniciar">
+      </section>
+    </main>
+  </div>
 </body>
 </html>
